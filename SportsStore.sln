@@ -5,6 +5,15 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SportsStore.Tests", "Sports
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SportsStore.Domain", "SportsStore.Domain\SportsStore.Domain.csproj", "{2485D0D2-FD4B-4F8C-A860-283E107828F3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SportsStore.Web", "SportsStore.Web\SportsStore.Web.csproj", "{5737572E-3524-42F1-8B6B-EBCFBCB3DEBD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{8370426B-BBE6-4038-B650-AA8CA7D057DF}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,6 +28,10 @@ Global
 		{2485D0D2-FD4B-4F8C-A860-283E107828F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2485D0D2-FD4B-4F8C-A860-283E107828F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2485D0D2-FD4B-4F8C-A860-283E107828F3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5737572E-3524-42F1-8B6B-EBCFBCB3DEBD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5737572E-3524-42F1-8B6B-EBCFBCB3DEBD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5737572E-3524-42F1-8B6B-EBCFBCB3DEBD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5737572E-3524-42F1-8B6B-EBCFBCB3DEBD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
