@@ -1,8 +1,6 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SportsStore.Tests", "SportsStore.Tests\SportsStore.Tests.csproj", "{3D9FE490-8A64-43CF-B930-646FE4C88983}"
-EndProject
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Express 2012 for Web
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SportsStore.Domain", "SportsStore.Domain\SportsStore.Domain.csproj", "{2485D0D2-FD4B-4F8C-A860-283E107828F3}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SportsStore.Web", "SportsStore.Web\SportsStore.Web.csproj", "{5737572E-3524-42F1-8B6B-EBCFBCB3DEBD}"
@@ -14,16 +12,14 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{837042
 		.nuget\NuGet.targets = .nuget\NuGet.targets
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SportsStore.Tests.Unit", "SportsStore.Tests.Unit\SportsStore.Tests.Unit.csproj", "{D442B227-4BF1-4E66-BF1B-6924AD3AACC9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{3D9FE490-8A64-43CF-B930-646FE4C88983}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3D9FE490-8A64-43CF-B930-646FE4C88983}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3D9FE490-8A64-43CF-B930-646FE4C88983}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3D9FE490-8A64-43CF-B930-646FE4C88983}.Release|Any CPU.Build.0 = Release|Any CPU
 		{2485D0D2-FD4B-4F8C-A860-283E107828F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{2485D0D2-FD4B-4F8C-A860-283E107828F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2485D0D2-FD4B-4F8C-A860-283E107828F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -32,6 +28,10 @@ Global
 		{5737572E-3524-42F1-8B6B-EBCFBCB3DEBD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5737572E-3524-42F1-8B6B-EBCFBCB3DEBD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5737572E-3524-42F1-8B6B-EBCFBCB3DEBD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D442B227-4BF1-4E66-BF1B-6924AD3AACC9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D442B227-4BF1-4E66-BF1B-6924AD3AACC9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D442B227-4BF1-4E66-BF1B-6924AD3AACC9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D442B227-4BF1-4E66-BF1B-6924AD3AACC9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
