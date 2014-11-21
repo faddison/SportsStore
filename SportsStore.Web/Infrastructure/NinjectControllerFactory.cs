@@ -24,6 +24,7 @@ namespace SportsStore.Web.Infrastructure
 
     using SportsStore.Domain.Abstract;
     using SportsStore.Domain.Entities;
+    using SportsStore.Domain.Concrete;
 
     public class NinjectControllerFactory : DefaultControllerFactory
     {
@@ -42,6 +43,7 @@ namespace SportsStore.Web.Infrastructure
 
         private void AddBindings()
         {
+            /*
             Mock<IProductRepository> mock = new Mock<IProductRepository>();
             mock.Setup(m => m.Products)
                 .Returns(
@@ -53,6 +55,9 @@ namespace SportsStore.Web.Infrastructure
                         }.AsQueryable());
 
             ninjectKernel.Bind<IProductRepository>().ToConstant(mock.Object);
+             */
+
+            ninjectKernel.Bind<IProductRepository>().To<EFProductRepository>();
         }
     }
 }
