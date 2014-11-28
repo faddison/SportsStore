@@ -132,5 +132,74 @@ namespace SportsStore.Tests.Unit
             Assert.AreEqual("Cat4", results[1]);
             Assert.AreEqual("Cat5", results[2]);
         }
+
+        [TestMethod]
+        public void GenerateCategorySpecificProductCount1()
+        {
+            var products = new Product[] 
+            {
+                new Product {ProductID = 1, Name = "P1", Category = "Cat1"},
+                new Product {ProductID = 2, Name = "P1", Category = "Cat1"},
+                new Product {ProductID = 3, Name = "P2", Category = "Cat2"},
+                new Product {ProductID = 4, Name = "P3", Category = "Cat2"},
+                new Product {ProductID = 5, Name = "P4", Category = "Cat3"}
+            }.AsQueryable();
+
+            Mock<IProductRepository> mock = new Mock<IProductRepository>();
+            mock.Setup(m => m.Products).Returns(products);
+
+            ProductController productController = new ProductController(mock.Object);
+            productController.PageSize = 3;
+
+            var result = ((ProductsListViewModel)productController.List("Cat1").Model).PagingInfo.TotalPages;
+
+            Assert.AreEqual(1, result);
+        }
+
+        [TestMethod]
+        public void GenerateCategorySpecificProductCount2()
+        {
+            var products = new Product[] 
+            {
+                new Product {ProductID = 1, Name = "P1", Category = "Cat1"},
+                new Product {ProductID = 2, Name = "P1", Category = "Cat1"},
+                new Product {ProductID = 3, Name = "P2", Category = "Cat1"},
+                new Product {ProductID = 4, Name = "P3", Category = "Cat1"},
+                new Product {ProductID = 5, Name = "P4", Category = "Cat1"}
+            }.AsQueryable();
+
+            Mock<IProductRepository> mock = new Mock<IProductRepository>();
+            mock.Setup(m => m.Products).Returns(products);
+
+            ProductController productController = new ProductController(mock.Object);
+            productController.PageSize = 3;
+
+            var result = ((ProductsListViewModel)productController.List("Cat1").Model).PagingInfo.TotalPages;
+
+            Assert.AreEqual(2, result);
+        }
+
+        [TestMethod]
+        public void GenerateCategorySpecificProductCount3()
+        {
+            var products = new Product[] 
+            {
+                new Product {ProductID = 1, Name = "P1", Category = "Cat1"},
+                new Product {ProductID = 2, Name = "P1", Category = "Cat1"},
+                new Product {ProductID = 3, Name = "P2", Category = "Cat1"},
+                new Product {ProductID = 4, Name = "P3", Category = "Cat1"},
+                new Product {ProductID = 5, Name = "P4", Category = "Cat1"}
+            }.AsQueryable();
+
+            Mock<IProductRepository> mock = new Mock<IProductRepository>();
+            mock.Setup(m => m.Products).Returns(products);
+
+            ProductController productController = new ProductController(mock.Object);
+            productController.PageSize = 3;
+
+            var result = ((ProductsListViewModel)productController.List(null).Model).PagingInfo.TotalPages;
+
+            Assert.AreEqual(1, result);
+        }
     }
 }
